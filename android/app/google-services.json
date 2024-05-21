@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "469108577114",
+    "project_id": "notely-todo-list-777",
+    "storage_bucket": "notely-todo-list-777.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469108577114:android:eee49e437702b0e3355963",
+        "android_client_info": {
+          "package_name": "com.kubaolszewski.todo_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVxRfAMS9Yw4ommYEV5X4mLzTQPM-9l6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

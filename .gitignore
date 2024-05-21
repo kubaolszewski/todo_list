@@ -31,6 +31,16 @@ migrate_working_dir/
 .pub/
 /build/
 
+#Firebase options file
+lib/firebase_options.dart
+
+# Freezed generated files
+*.g.dart
+*.freezed.dart
+
+# Generated translations
+/lib/generated/*
+
 # Symbolication related
 app.*.symbols
 

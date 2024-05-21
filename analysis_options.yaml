@@ -1,1 +1,8 @@
 include: package:flutter_lints/flutter.yaml
+
+rules:
+  - prefer_relative_imports
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
