@@ -1,4 +1,4 @@
-name: todo_list
+name: notely_todo_list
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -10,11 +10,17 @@ dependencies:
   firebase_core: ^2.31.1
   flutter:
     sdk: flutter
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+  riverpod: ^2.5.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  build_runner: ^2.4.10
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
 
 flutter:
   uses-material-design: true

@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC0xMlIV_FxpVnbAMOSkcKUwE3Nf3Fl8d4',
-    appId: '1:199772311783:android:cc4e222b8c4c01e8d65242',
-    messagingSenderId: '199772311783',
-    projectId: 'notely-todo-list',
-    storageBucket: 'notely-todo-list.appspot.com',
+    apiKey: 'AIzaSyCVxRfAMS9Yw4ommYEV5X4mLzTQPM-9l6w',
+    appId: '1:469108577114:android:eee49e437702b0e3355963',
+    messagingSenderId: '469108577114',
+    projectId: 'notely-todo-list-777',
+    storageBucket: 'notely-todo-list-777.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyByS_dpLLspu01HL57PP1JWM0_I-ZHJfCA',
-    appId: '1:199772311783:ios:4d182dfdc30ef8fcd65242',
-    messagingSenderId: '199772311783',
-    projectId: 'notely-todo-list',
-    storageBucket: 'notely-todo-list.appspot.com',
+    apiKey: 'AIzaSyDXHQcqFx8PjiS1aDac1LpET4GWG8ewfIM',
+    appId: '1:469108577114:ios:e2dfbf2fb5de840f355963',
+    messagingSenderId: '469108577114',
+    projectId: 'notely-todo-list-777',
+    storageBucket: 'notely-todo-list-777.appspot.com',
     iosBundleId: 'com.kubaolszewski.todoList',
   );
 }

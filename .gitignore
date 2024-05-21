@@ -31,6 +31,13 @@ migrate_working_dir/
 .pub/
 /build/
 
+# Freezed generated files
+*.g.dart
+*.freezed.dart
+
+# Generated translations
+/lib/generated/*
+
 # Symbolication related
 app.*.symbols
 
