@@ -8,6 +8,10 @@ class MainModule extends Module {
 
   @override
   void routes(RouteManager r) {
-    r.module('/', module: HomeModule());
+    r.module(MainModulePaths.homePath, module: HomeModule());
   }
+}
+
+mixin MainModulePaths {
+  static const homePath = '/';
 }

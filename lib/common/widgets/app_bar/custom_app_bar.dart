@@ -19,6 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.backgroundColor,
     this.titleColor,
     this.backButtonPadding,
+    this.centerTitle = false,
   });
 
   final String title;
@@ -33,6 +34,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? backgroundColor;
   final Color? titleColor;
   final EdgeInsetsGeometry? backButtonPadding;
+  final bool? centerTitle;
 
   @override
   final Size preferredSize = const Size.fromHeight(80);
@@ -42,7 +44,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       titleSpacing: 0,
-      centerTitle: false,
       systemOverlayStyle: SystemUiOverlayStyle.dark.copyWith(
         statusBarColor: Colors.white,
         // AppColors.whiteBackground,
@@ -52,6 +53,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: contentHorizontalMargin),
           child: Row(
+            mainAxisAlignment: centerTitle == true ? MainAxisAlignment.center : MainAxisAlignment.start,
             children: [
               if (showBackButton)
                 Padding(
@@ -74,7 +76,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   child: Text(
                     title.tr(),
                     style: TextStyle(
-                      color: titleColor ?? Colors.grey,
+                      color: titleColor ?? Colors.black,
                       fontSize: 30.sp,
                       fontWeight: FontWeight.w700,
                     ),
@@ -84,7 +86,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     // ),
                   ),
                 ),
-              const Spacer(),
               if (actions != null) ...actions!
             ],
           ),

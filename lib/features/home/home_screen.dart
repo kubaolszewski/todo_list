@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart' hide ModularWatchExtension;
 
-import '../../common/widgets/app_scaffold/app_scaffold.dart';
+import 'cubit/home_cubit.dart';
 import 'home_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,8 +12,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AppScaffold(
-      body: HomeView(),
+    return BlocProvider(
+      create: (context) => Modular.get<HomeCubit>(),
+      child: const HomeView(),
     );
   }
 }

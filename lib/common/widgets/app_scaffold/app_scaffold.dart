@@ -8,7 +8,7 @@ final _contentPadding = EdgeInsets.symmetric(horizontal: 16.w);
 class AppScaffold extends StatelessWidget {
   const AppScaffold({
     super.key,
-    required this.body,
+    required this.child,
     this.appBar,
     this.bottomNavigationBar,
     this.padding,
@@ -17,7 +17,7 @@ class AppScaffold extends StatelessWidget {
     this.backgroundColor,
   });
 
-  final Widget body;
+  final Widget child;
   final PreferredSizeWidget? appBar;
   final Widget? bottomNavigationBar;
   final EdgeInsetsGeometry? padding;
@@ -38,7 +38,7 @@ class AppScaffold extends StatelessWidget {
         body: SafeArea(
           child: Padding(
             padding: padding ?? _contentPadding,
-            child: body,
+            child: child,
           ),
         ),
       ),
@@ -50,13 +50,13 @@ class AppScaffold extends StatelessWidget {
 class AppScaffoldWithBottomBar extends StatelessWidget {
   const AppScaffoldWithBottomBar({
     super.key,
-    required this.body,
+    required this.child,
     this.appBar,
     this.padding,
     this.resizeToAvoidBottomInset = false,
   });
 
-  final Widget body;
+  final Widget child;
   final PreferredSizeWidget? appBar;
   final EdgeInsetsGeometry? padding;
   final bool resizeToAvoidBottomInset;
@@ -71,7 +71,7 @@ class AppScaffoldWithBottomBar extends StatelessWidget {
       // ),
       resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       padding: padding,
-      body: body,
+      child: child,
     );
   }
 }

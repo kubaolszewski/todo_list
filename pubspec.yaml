@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  bloc: ^8.1.4
   bloc_presentation: ^1.0.0
   bloc_test: ^9.1.7
   dio: ^5.4.3+1
@@ -17,7 +18,8 @@ dependencies:
   easy_localization: ^3.0.7
   either_dart: ^1.0.0
   firebase_core: ^2.32.0
-  flutter_hooks_bloc: ^0.17.0
+  flutter_bloc: ^8.1.5
+  flutter_hooks: ^0.20.5
   flutter_modular: ^6.3.4
   flutter_screenutil: ^5.9.1
   flutter_secure_storage: ^9.2.2
@@ -53,6 +55,17 @@ flutter:
   assets:
   - assets/
   - assets/translations/
+  - fonts/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+          style: normal
+        - asset: fonts/Roboto-Bold.ttf
+        - asset: fonts/Roboto-Italic.ttf
+          style: italic
+        - asset: fonts/Roboto-Medium.ttf
 
 import_path_converter:
   relative: true # Select relative path import or package import(default: false)

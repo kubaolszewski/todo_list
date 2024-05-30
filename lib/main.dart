@@ -7,20 +7,16 @@ import 'firebase_options.dart';
 
 import 'main_module.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await EasyLocalization.ensureInitialized();
 
   return runApp(
     EasyLocalization(
-      supportedLocales: const [
-        Locale('en', 'US'),
-      ],
+      supportedLocales: const [Locale('en')],
       path: 'assets/translations',
-      fallbackLocale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en'),
       child: ModularApp(
         module: MainModule(),
         child: const MainApp(),
