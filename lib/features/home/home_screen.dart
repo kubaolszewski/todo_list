@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../common/widgets/app_scaffold/app_scaffold.dart';
+import 'home_view.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
     super.key,
@@ -7,10 +10,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Hello World!'),
-      ),
+    return const AppScaffold(
+      body: HomeView(),
     );
   }
 }
