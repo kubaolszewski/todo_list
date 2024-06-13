@@ -45,33 +45,3 @@ class AppScaffold extends StatelessWidget {
     );
   }
 }
-
-// TODO: Left for probable future usage
-class AppScaffoldWithBottomBar extends StatelessWidget {
-  const AppScaffoldWithBottomBar({
-    super.key,
-    required this.child,
-    this.appBar,
-    this.padding,
-    this.resizeToAvoidBottomInset = false,
-  });
-
-  final Widget child;
-  final PreferredSizeWidget? appBar;
-  final EdgeInsetsGeometry? padding;
-  final bool resizeToAvoidBottomInset;
-
-  @override
-  Widget build(BuildContext context) {
-    return AppScaffold(
-      appBar: appBar,
-      // bottomNavigationBar: BlocBuilder<SessionCacheCubit, SessionCacheState>(
-      //   buildWhen: (prev, current) => prev.user != current.user || prev.user?.role != current.user?.role,
-      //   builder: (_, state) => state.user.isNotNull ? AppBottomBar(state: state) : const SizedBox.shrink(),
-      // ),
-      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-      padding: padding,
-      child: child,
-    );
-  }
-}

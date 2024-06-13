@@ -1,3 +1,6 @@
 {
-    "appTitle": "Notely Todo List"
+    "appTitle": "Notely Todo List",
+    "todos": "Todos",
+    "search": "Search",
+    "account": "Account"
 }
