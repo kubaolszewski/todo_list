@@ -5,23 +5,23 @@ import '../../common/widgets/app_bottom_nav_bar/app_bottom_nav_bar.dart';
 import '../../common/widgets/app_scaffold/app_scaffold.dart';
 import '../../generated/locale_keys.g.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({
+class SearchView extends StatelessWidget {
+  const SearchView({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    const pageIndex = 0;
-
-    return const AppScaffold(
-      appBar: CustomAppBar(
+    const pageIndex = 1;
+    return AppScaffold(
+      appBar: const CustomAppBar(
         title: LocaleKeys.appTitle,
         centerTitle: true,
       ),
-      bottomNavigationBar: AppBottomNavigationBar(currentIndex: pageIndex),
-      child: Center(
-        child: Text('Test Text'),
+      bottomNavigationBar:
+          const AppBottomNavigationBar(currentIndex: pageIndex),
+      child: Container(
+        color: Colors.red,
       ),
     );
   }
