@@ -12,6 +12,7 @@ dependencies:
   bloc: ^8.1.4
   bloc_presentation: ^1.0.0
   bloc_test: ^9.1.7
+  cloud_firestore: ^5.0.1
   dio: ^5.4.3
   drift: ^2.18.0
   drift_sqlite_async: ^0.1.0-alpha.1

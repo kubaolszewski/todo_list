@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.backgroundColor,
     this.titleColor,
     this.backButtonPadding,
-    this.centerTitle = false,
+    this.centerTitle = true,
   });
 
   final String title;
@@ -46,7 +46,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       titleSpacing: 0,
       systemOverlayStyle: SystemUiOverlayStyle.dark.copyWith(
         statusBarColor: Colors.white,
-        // AppColors.whiteBackground,
       ),
       flexibleSpace: Align(
         alignment: Alignment.bottomCenter,
