@@ -1,7 +1,8 @@
 include: package:flutter_lints/flutter.yaml
 
-rules:
-  - prefer_relative_imports
+linter:
+  rules:
+    - prefer_relative_imports
 
 analyzer:
   errors:
