@@ -1,13 +1,15 @@
 import 'package:bloc/bloc.dart';
 
-import '../../../data/services/firestore/firestore_service.dart';
+import '../../../data/repositories/firestore_repository/firestore_repository.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(const HomeState());
 
+  final _firestoreRepository = FirestoreRepository();
+
   Future<void> getTodos() async {
-    FirestoreService()
+    _firestoreRepository
         .getItemsStream()
         .listen((todos) => emit(state.copyWith(todos: todos)));
   }
