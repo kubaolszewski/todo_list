@@ -23,14 +23,12 @@ class HomeView extends StatelessWidget {
       bottomNavigationBar: const AppBottomNavigationBar(
           currentIndex: AppConsts.homeScreenIndex),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showDialog(
-            context: context,
-            builder: (context) => const AppDialogBody(
-              body: HomeAddTodoDialog(),
-            ),
-          );
-        },
+        onPressed: () => showDialog(
+          context: context,
+          builder: (context) => const AppDialogBody(
+            body: HomeAddTodoDialog(),
+          ),
+        ),
         child: const Icon(Icons.add),
       ),
       child: const HomeTodosListSection(),
