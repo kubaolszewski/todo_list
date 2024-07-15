@@ -49,9 +49,9 @@ class AppBottomNavigationBar extends StatelessWidget {
       ],
       selectedFontSize: 16,
       unselectedFontSize: 14,
-      selectedLabelStyle:
-          const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
-      selectedItemColor: Colors.red,
+      selectedLabelStyle: const TextStyle(
+          fontWeight: FontWeight.bold, color: Colors.black),
+      selectedItemColor: Theme.of(context).colorScheme.primary,
       unselectedItemColor: Colors.black,
     );
   }
