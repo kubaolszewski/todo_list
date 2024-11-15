@@ -12,7 +12,7 @@ class HomeAddTodoDialog extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         const Text('Adding todos soon....'),
-        const SizedBox(height: 8),
+        const SizedBox(height: 12),
         SizedBox(
           width: 200,
           child: TextButton(
