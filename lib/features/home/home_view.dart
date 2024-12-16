@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../common/utils/app_consts/app_consts.dart';
 import '../../common/widgets/app_bar/custom_app_bar.dart';
 import '../../common/widgets/app_bottom_nav_bar/app_bottom_nav_bar.dart';
-import '../../common/widgets/app_dialog_body/app_dialog_body.dart';
 import '../../common/widgets/app_scaffold/app_scaffold.dart';
 import '../../generated/locale_keys.g.dart';
-import 'widgets/add_todo_dialog/add_todo_dialog.dart';
+import 'add_todo/add_todo_screen.dart';
 import 'widgets/home_todos_list_section/home_todos_list_section.dart';
 
 class HomeView extends StatelessWidget {
@@ -25,12 +25,8 @@ class HomeView extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
-        onPressed: () => showDialog(
-          context: context,
-          builder: (context) => const AppDialogBody(
-            body: AddTodoDialog(),
-          ),
-        ),
+        onPressed: () => Modular.to
+            .push(MaterialPageRoute(builder: (context) => AddTodoScreen())),
         child: const Icon(
           Icons.add,
           color: Colors.white,
