@@ -6,7 +6,7 @@ import '../../common/widgets/app_bottom_nav_bar/app_bottom_nav_bar.dart';
 import '../../common/widgets/app_dialog_body/app_dialog_body.dart';
 import '../../common/widgets/app_scaffold/app_scaffold.dart';
 import '../../generated/locale_keys.g.dart';
-import 'widgets/home_add_todo_dialog/home_add_todo_dialog.dart';
+import 'widgets/add_todo_dialog/add_todo_dialog.dart';
 import 'widgets/home_todos_list_section/home_todos_list_section.dart';
 
 class HomeView extends StatelessWidget {
@@ -28,7 +28,7 @@ class HomeView extends StatelessWidget {
         onPressed: () => showDialog(
           context: context,
           builder: (context) => const AppDialogBody(
-            body: HomeAddTodoDialog(),
+            body: AddTodoDialog(),
           ),
         ),
         child: const Icon(

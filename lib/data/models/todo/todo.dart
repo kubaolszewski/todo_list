@@ -1,18 +1,17 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'todos_model.freezed.dart';
-part 'todos_model.g.dart';
+part 'todo.freezed.dart';
+part 'todo.g.dart';
 
 @freezed
-class TodosModel with _$TodosModel {
-  const factory TodosModel({
+class Todo with _$Todo {
+  const factory Todo({
     final String? title,
     final String? description,
     @JsonSerializable(fieldRename: FieldRename.snake) final DateTime? endDate,
     final String? type,
     @JsonSerializable(fieldRename: FieldRename.snake) final DateTime? authorId,
-  }) = _TodosModel;
+  }) = _Todo;
 
-  factory TodosModel.fromJson(Map<String, dynamic> json) =>
-      _$TodosModelFromJson(json);
+  factory Todo.fromJson(Map<String, dynamic> json) => _$TodoFromJson(json);
 }

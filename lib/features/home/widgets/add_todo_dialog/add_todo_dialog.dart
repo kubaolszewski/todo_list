@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class HomeAddTodoDialog extends StatelessWidget {
-  const HomeAddTodoDialog({
+class AddTodoDialog extends StatelessWidget {
+  const AddTodoDialog({
     super.key,
   });
 
