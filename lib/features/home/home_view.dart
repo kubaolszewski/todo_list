@@ -21,15 +21,20 @@ class HomeView extends StatelessWidget {
         title: LocaleKeys.appTitle,
       ),
       bottomNavigationBar: const AppBottomNavigationBar(
-          currentIndex: AppConsts.homeScreenIndex),
+        currentIndex: AppConsts.homeScreenIndex,
+      ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.red,
         onPressed: () => showDialog(
           context: context,
           builder: (context) => const AppDialogBody(
             body: HomeAddTodoDialog(),
           ),
         ),
-        child: const Icon(Icons.add),
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
       child: const HomeTodosListSection(),
     );

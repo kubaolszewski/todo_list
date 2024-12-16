@@ -24,11 +24,11 @@ class MainModule extends Module {
   @override
   void routes(RouteManager r) {
     r.module(MainModulePaths.homeScreen,
-        module: HomeModule(), transition: TransitionType.noTransition);
+        module: HomeModule(), transition: TransitionType.noTransition,);
     r.module(MainModulePaths.searchScreen,
-        module: SearchModule(), transition: TransitionType.noTransition);
+        module: SearchModule(), transition: TransitionType.noTransition,);
     r.module(MainModulePaths.accountScreen,
-        module: AccountModule(), transition: TransitionType.noTransition);
+        module: AccountModule(), transition: TransitionType.noTransition,);
   }
 }
 

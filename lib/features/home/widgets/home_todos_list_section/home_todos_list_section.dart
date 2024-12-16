@@ -24,16 +24,16 @@ class HomeTodosListSection extends StatelessWidget {
                     decoration: const BoxDecoration(
                         color: Colors.red,
                         borderRadius:
-                            BorderRadius.all(Radius.circular(24))),
+                            BorderRadius.all(Radius.circular(24)),),
                     child: Center(
                         child: Text(
                       state.todos[index].title!,
                       style: const TextStyle(color: Colors.white),
-                    )),
+                    ),),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         );
       },

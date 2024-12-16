@@ -11,6 +11,6 @@ class FirestoreService {
     final docSnap = FirebaseFirestore.instance.collection('todos').snapshots();
 
     return docSnap.map((todos) =>
-        todos.docs.map((todo) => TodosModel.fromJson(todo.data())).toList());
+        todos.docs.map((todo) => TodosModel.fromJson(todo.data())).toList(),);
   }
 }
