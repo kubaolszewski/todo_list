@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-//TODO: refactor code here later
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
@@ -68,7 +67,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       size: 28.r,
                     ),
                     color: Colors.black,
-                    // AppColors.black,
                     onPressed: disableBackButton
                         ? null
                         : onBackButtonPressed ?? () => Modular.to.pop(),
@@ -84,10 +82,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       fontSize: 30.sp,
                       fontWeight: FontWeight.w700,
                     ),
-                    // h700TextStyle.copyWith(
-                    //   color: titleColor ?? AppColors.grey,
-                    //   fontSize: 30.sp,
-                    // ),
                   ),
                 ),
               if (actions != null) ...actions!,
@@ -96,7 +90,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       backgroundColor: backgroundColor ?? Colors.white,
-      // AppColors.whiteBackground,
       elevation: 0,
       bottom: showUnderline
           ? PreferredSize(
@@ -105,9 +98,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 margin: EdgeInsets.symmetric(
                   horizontal: bottomLineHorizontalMargin,
                 ),
-                // ignore: deprecated_member_use
-                color: Colors.grey.withOpacity(0.15),
-                // AppColors.grey.withOpacity(0.15),
+                color: Colors.grey.withValues(alpha: 0.15),
                 height: 1,
               ),
             )

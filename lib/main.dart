@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'app.dart';
+import 'common/utils/app_paths/asset_paths.dart';
 import 'firebase_options.dart';
 
 import 'main_module.dart';
@@ -15,7 +16,7 @@ Future<void> main() async {
   return runApp(
     EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('pl')],
-      path: 'assets/translations',
+      path: AssetPaths.translations,
       fallbackLocale: const Locale('en'),
       child: ModularApp(
         module: MainModule(),
