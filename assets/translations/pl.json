@@ -2,5 +2,6 @@
     "appTitle": "Notely Todo List",
     "todos": "Zadania",
     "search": "Szukaj",
-    "account": "Konto"
+    "account": "Konto",
+    "addTodo": "Dodaj zadanie!"
 }

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'common/utils/app_themes/app_themes.dart';
+
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -10,7 +12,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(428, 926),
-      fontSizeResolver: (fontSize, instance) => FontSizeResolvers.radius(fontSize, instance),
+      fontSizeResolver: (fontSize, instance) =>
+          FontSizeResolvers.radius(fontSize, instance),
       rebuildFactor: (_, __) => false,
       child: MaterialApp.router(
           title: 'Notely Todo List',
@@ -19,7 +22,8 @@ class MainApp extends StatelessWidget {
           locale: context.locale,
           debugShowCheckedModeBanner: false,
           routerConfig: Modular.routerConfig,
-          theme: ThemeData(fontFamily: 'Roboto'),
+          theme: theme,
+          darkTheme: darkTheme,
           builder: (context, child) {
             return ScrollConfiguration(
               behavior: _GlowEffectBehavior(),
@@ -32,7 +36,7 @@ class MainApp extends StatelessWidget {
                 child: child!,
               ),
             );
-          }),
+          },),
     );
   }
 }

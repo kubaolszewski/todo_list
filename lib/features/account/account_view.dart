@@ -18,7 +18,7 @@ class AccountView extends StatelessWidget {
         title: LocaleKeys.appTitle,
       ),
       bottomNavigationBar: const AppBottomNavigationBar(
-          currentIndex: AppConsts.accountScreenIndex),
+          currentIndex: AppConsts.accountScreenIndex,),
       child: Container(
         color: Colors.blue,
       ),

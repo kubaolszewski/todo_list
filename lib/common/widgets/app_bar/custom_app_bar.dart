@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+//TODO: refactor code here later
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
@@ -52,7 +53,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: contentHorizontalMargin),
           child: Row(
-            mainAxisAlignment: centerTitle == true ? MainAxisAlignment.center : MainAxisAlignment.start,
+            mainAxisAlignment: centerTitle == true
+                ? MainAxisAlignment.center
+                : MainAxisAlignment.start,
             children: [
               if (showBackButton)
                 Padding(
@@ -66,7 +69,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     ),
                     color: Colors.black,
                     // AppColors.black,
-                    onPressed: disableBackButton ? null : onBackButtonPressed ?? () => Modular.to.pop(),
+                    onPressed: disableBackButton
+                        ? null
+                        : onBackButtonPressed ?? () => Modular.to.pop(),
                   ),
                 ),
               if (title.isNotEmpty)
@@ -85,7 +90,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     // ),
                   ),
                 ),
-              if (actions != null) ...actions!
+              if (actions != null) ...actions!,
             ],
           ),
         ),
@@ -97,7 +102,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ? PreferredSize(
               preferredSize: Size.fromHeight(4.h),
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: bottomLineHorizontalMargin),
+                margin: EdgeInsets.symmetric(
+                  horizontal: bottomLineHorizontalMargin,
+                ),
+                // ignore: deprecated_member_use
                 color: Colors.grey.withOpacity(0.15),
                 // AppColors.grey.withOpacity(0.15),
                 height: 1,
