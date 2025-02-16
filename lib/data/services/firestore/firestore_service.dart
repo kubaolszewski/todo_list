@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../models/todo/todo.dart';
+import '../../models/todos/todos_model.dart';
 
 class FirestoreService {
-  Stream<List<Todo>> getItemsStream() {
+  Stream<List<TodosModel>> getItemsStream() {
     // final userID = FirebaseAuth.instance.currentUser?.uid;
     // if (userID == null) {
     //   throw Exception('User is not logged in.');
@@ -11,7 +11,7 @@ class FirestoreService {
     final docSnap = FirebaseFirestore.instance.collection('todos').snapshots();
 
     return docSnap.map(
-      (todos) => todos.docs.map((todo) => Todo.fromJson(todo.data())).toList(),
+      (todos) => todos.docs.map((todo) => TodosModel.fromJson(todo.data())).toList(),
     );
   }
 }
