@@ -38,6 +38,7 @@ dependencies:
   retrofit: ^4.4.1
   shimmer: ^3.0.0
   sqlite3_flutter_libs: ^0.5.27
+  flutter_native_splash: ^2.4.4
 
 dev_dependencies:
   flutter_test:
@@ -58,17 +59,18 @@ flutter:
   assets:
   - assets/
   - assets/translations/
-  - fonts/
-
+  - assets/fonts/
+  - assets/images/
+  
   fonts:
     - family: Roboto
       fonts:
-        - asset: fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Regular.ttf
           style: normal
-        - asset: fonts/Roboto-Bold.ttf
-        - asset: fonts/Roboto-Italic.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto-Italic.ttf
           style: italic
-        - asset: fonts/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
 
 import_path_converter:
   relative: true # Select relative path import or package import(default: false)
